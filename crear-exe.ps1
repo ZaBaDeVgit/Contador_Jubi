@@ -30,6 +30,9 @@ class Program
 }
 '@
 
-Add-Type -TypeDefinition $sourceCode -OutputAssembly "C:\contador-jubilacion\MiJubilacion.exe" -OutputType ConsoleApplication -ReferencedAssemblies System.Windows.Forms
+$currentDir = $PSScriptRoot
+$outputPath = Join-Path $currentDir "MiJubilacion.exe"
 
-Write-Host "Ejecutable creado: C:\contador-jubilacion\MiJubilacion.exe"
+Add-Type -TypeDefinition $sourceCode -OutputAssembly $outputPath -OutputType ConsoleApplication -ReferencedAssemblies System.Windows.Forms
+
+Write-Host "Ejecutable creado: $outputPath"

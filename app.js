@@ -1,5 +1,5 @@
 const RETIREMENT_DATE = new Date('May 12, 2039 00:00:00').getTime();
-const START_DATE = new Date('2026-01-01').getTime();
+const START_DATE = new Date('2000-10-26').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
